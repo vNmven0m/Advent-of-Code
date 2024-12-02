@@ -10,10 +10,7 @@ with open("Day 1\input\input") as f:
 a.sort()
 b.sort()
 
-i = 0
-r = 0
-while i <= (len(a)-1):
-    r += abs(a[i]-b[i])
-    i += 1
-
+r = i = 0
+for i in a:
+    r += i*b.count(i)
 print(r)
